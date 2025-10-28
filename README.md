@@ -1258,6 +1258,7 @@ Result: Plaintext recovered exactly
 Windows validates the signature for every driver which is going to be installed.
 For security reasons, Windows allows only drivers signed by Microsoft to load.
 So, when using a custom build:
+
 ![CertVerifyFails](https://github.com/user-attachments/assets/fd03ff0d-274b-40b0-b307-317374c9fd94)
 
     If you have not modified the VeraCrypt driver source code, you can use the Microsoft-signed drivers included in the VeraCrypt source code (under "src\Release\Setup Files").
