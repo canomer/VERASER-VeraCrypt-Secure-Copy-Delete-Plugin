@@ -16,7 +16,7 @@ This tool **reduces** — but does **not guarantee** — irrecoverability in all
 - Review code and submit PRs or platform-specific tests.  
 - If you plan to propose upstream integration, please include forensic test results and clear threat modeling.
 
-Repo: \<GITHUB_URL\>  
+Repo: github.com/canomer/VERASER-VeraCrypt-Secure-Copy-Delete-Plugin
 — 
 
 ---
@@ -95,6 +95,7 @@ VERASER implements **cryptographic erasure** and **multi-pass overwriting** tech
 5. **SSD Optimization**: TRIM-aware algorithms for modern solid-state storage
 
 ### Workflow Integration
+<img width="568" height="491" alt="veraser11" src="https://github.com/user-attachments/assets/32c1ef93-2e9c-4eef-8a78-6cf8a080ad16" />
 
 ```
 VeraCrypt Main Window
@@ -120,11 +121,13 @@ VeraCrypt Main Window
 - **Atomic Workflow**: Copy file to destination → Securely erase original
 - **Integrity Preservation**: Destination file identical to source (bit-for-bit verification)
 - **User-Friendly**: Single operation replaces error-prone manual processes
+<img width="675" height="660" alt="veraser12" src="https://github.com/user-attachments/assets/b8409e4b-1948-404b-8f83-d934f62ac4d5" />
 
 ### 2. Secure Delete Operation
 - **In-Place Erasure**: Overwrite file contents before filesystem deletion
 - **Directory Recursion**: Support for folder hierarchies (future enhancement)
 - **Attribute Handling**: Automatically clears read-only flags
+<img width="678" height="590" alt="veraser16" src="https://github.com/user-attachments/assets/08049497-0517-465f-a2eb-bee83af6c9d4" />
 
 ### 3. Algorithm Suite
 
@@ -1243,6 +1246,35 @@ Result: Plaintext recovered exactly
 4. Use stronger algorithm: Upgrade from Zero to NIST or SSD
 5. Contact support with detailed reproduction steps
 
+---
+
+#### Issue 5: Driver Installation Failure during VeraCrypt Setup from Custom Builds
+**Symptoms**: Cannot setup from binary  
+**Causes**:
+- Windows cannot verify the digital signature for the file.
+- Incorrect signing
+
+**Solutions**:
+Windows validates the signature for every driver which is going to be installed.
+For security reasons, Windows allows only drivers signed by Microsoft to load.
+So, when using a custom build:
+![CertVerifyFails](https://github.com/user-attachments/assets/fd03ff0d-274b-40b0-b307-317374c9fd94)
+
+    If you have not modified the VeraCrypt driver source code, you can use the Microsoft-signed drivers included in the VeraCrypt source code (under "src\Release\Setup Files").
+    If you have made modifications, you will need to boot Windows into "Test Mode". This mode allows Windows to load drivers that aren't signed by Microsoft. However, even in "Test Mode", there are certain requirements for signatures, and failures can still occur due to reasons discussed below.
+
+Potential Causes for Installation Failure under "Test Mode":
+
+    The certificate used for signing is not trusted by Windows
+    You can verify if you are affected by checking the properties of the executable:
+        Make a right click on the VeraCrypt Setup executable: "src/Release/Setup Files/VeraCrypt Setup 1.XX.exe"
+        Click on properties
+        Go to the top menu "Digital Signatures". Her you will find two signatures in the Signature list
+        Check both by double clicking on it. If the headline says "The certificate in the signature cannot be verified", the corresponding signing certificate was not imported correctly.
+        Click on "View Certificate" and then on "Install Certificate..." to import the certificate to Local Machine certificate storage. For the Root certificates, you may need to choose "Place all certificates in the following store", and select the "Trusted Root Certification Authorities" store.
+![CertificateCannotBeVerified](https://github.com/user-attachments/assets/d7223b04-9419-48d9-be03-3e95c766271b)
+
+        
 ---
 
 ### Diagnostic Procedures
