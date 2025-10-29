@@ -1036,12 +1036,11 @@ limitations under the License.
 
 **Contact Information**:
 - **Email**: veraser-dev@example.com
-- **GitHub**: [@canomer](https://github.com/canomer/)
+- **GitHub**: [canomer](https://github.com/canomer/)
 - **LinkedIn**: [Ömer Can VURAL](https://linkedin.com/in/omer-can-vural)
 
 **Bug Reports**: [GitHub Issues](https://github.com/canomer/VERASER-VeraCrypt-Secure-Copy-Delete-Plugin/issues)  
 **Feature Requests**: [GitHub Discussions](https://github.com/canomer/VERASER-VeraCrypt-Secure-Copy-Delete-Plugin/discussions)  
-**Security Vulnerabilities**: veraser-security@example.com (PGP key available)
 
 ---
 
