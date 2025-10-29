@@ -1036,11 +1036,11 @@ limitations under the License.
 
 **Contact Information**:
 - **Email**: veraser-dev@example.com
-- **GitHub**: [@omercvural](https://github.com/omercvural)
-- **LinkedIn**: [Ömer Can VURAL](https://linkedin.com/in/omercvural)
+- **GitHub**: [@canomer](https://github.com/canomer/)
+- **LinkedIn**: [Ömer Can VURAL](https://linkedin.com/in/omer-can-vural)
 
-**Bug Reports**: [GitHub Issues](https://github.com/yourusername/veracrypt-veraser/issues)  
-**Feature Requests**: [GitHub Discussions](https://github.com/yourusername/veracrypt-veraser/discussions)  
+**Bug Reports**: [GitHub Issues](https://github.com/canomer/VERASER-VeraCrypt-Secure-Copy-Delete-Plugin/issues)  
+**Feature Requests**: [GitHub Discussions](https://github.com/canomer/VERASER-VeraCrypt-Secure-Copy-Delete-Plugin/discussions)  
 **Security Vulnerabilities**: veraser-security@example.com (PGP key available)
 
 ---
@@ -1055,7 +1055,7 @@ If you use VERASER in academic research, please cite:
   title = {VERASER: Secure File Erasure Plugin for VeraCrypt},
   year = {2025},
   version = {1.0},
-  url = {https://github.com/yourusername/veracrypt-veraser}
+  url = {https://github.com/canomer/VERASER-VeraCrypt-Secure-Copy-Delete-Plugin}
 }
 ```
 
