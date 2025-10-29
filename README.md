@@ -8,15 +8,6 @@ Project Date : Oct 2025 / Independent plugin: stream files into mounted VeraCryp
 - Provides a configurable secure-delete routine (overwrite + fsync + ftruncate + unlink + parent-dir fsync) intended to reduce practical on-disk recoverability on many HDD/filesystem setups.
 - Includes TOCTOU and symlink mitigations and detects non-rotational (SSD) devices to warn users where overwrite guarantees are unreliable.
 
-**Important limitations**
-This tool **reduces** — but does **not guarantee** — irrecoverability in all environments. Overwrite-based deletion can be ineffective on many SSDs (TRIM/wear-leveling), and it cannot remove copies held in snapshots, backups, VSS, swap, or external backups. See related documents for details.
-
-**How to help**
-- Test on your OS (HDD and SSD) and report reproducible issues at: \<GITHUB_URL\>/issues  
-- Review code and submit PRs or platform-specific tests.  
-- If you plan to propose upstream integration, please include forensic test results and clear threat modeling.
-
-Repo: github.com/canomer/VERASER-VeraCrypt-Secure-Copy-Delete-Plugin
 — 
 
 ---
