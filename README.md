@@ -1035,7 +1035,7 @@ limitations under the License.
 **Current Version**: 1.0
 
 **Contact Information**:
-- **Email**: veraser-dev@example.com
+- **Email**: can.omer.5306@outlook.com
 - **GitHub**: [canomer](https://github.com/canomer/)
 - **LinkedIn**: [Ömer Can VURAL](https://linkedin.com/in/omer-can-vural)
 
