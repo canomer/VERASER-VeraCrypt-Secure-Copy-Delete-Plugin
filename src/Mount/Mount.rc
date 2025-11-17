@@ -759,6 +759,10 @@ CAPTION "Secure Copy"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT           "Secure Copy: Copies file to destination then securely deletes original using selected algorithm.", -1, 10, 10, 380, 20
+
+    // *** NEW WARNING MESSAGE ADDED HERE ***
+    LTEXT           "Warning: Overwrite-based deletion is most effective on conventional HDDs. On SSDs or devices with TRIM/FTL, deletion cannot be guaranteed. Proceed only if you understand these limitations.", -1, 10, 25, 380, 20
+
     PUSHBUTTON      "Source...", IDC_SOURCE_BUTTON, 10, 40, 80, 14
     EDITTEXT        IDC_SOURCE_PATH, 100, 40, 280, 14, ES_READONLY
     PUSHBUTTON      "Destination...", IDC_DESTINATION_BUTTON, 10, 60, 80, 14
@@ -783,6 +787,10 @@ CAPTION "Secure Delete"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT           "Secure Delete: Permanently erases file using selected secure deletion algorithm.", -1, 10, 10, 380, 20
+
+    // *** NEW WARNING MESSAGE ADDED HERE ***
+    LTEXT           "Warning: Overwrite-based deletion is most effective on conventional HDDs. On SSDs or devices with TRIM/FTL, deletion cannot be guaranteed. Proceed only if you understand these limitations.", -1, 10, 25, 380, 20
+
     PUSHBUTTON      "Target...", IDC_TARGET_BUTTON, 10, 40, 80, 14
     EDITTEXT        IDC_TARGET_PATH, 100, 40, 280, 14, ES_READONLY
     GROUPBOX        "Secure Deletion Algorithm", -1, 10, 65, 370, 160
@@ -821,4 +829,5 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
+
 
