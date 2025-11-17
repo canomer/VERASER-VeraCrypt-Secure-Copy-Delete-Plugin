@@ -8,7 +8,7 @@ Project Date : Oct 2025 / Independent plugin: stream files into mounted VeraCryp
 - Provides a configurable secure-delete routine (overwrite + fsync + ftruncate + unlink + parent-dir fsync) intended to reduce practical on-disk recoverability on many HDD/filesystem setups.
 - Includes TOCTOU and symlink mitigations and detects non-rotational (SSD) devices to warn users where overwrite guarantees are unreliable.
 
-— 
+**Hardware note:** This workflow is most effective on conventional (CMR) HDDs. Overwrite-based secure deletion is *not* reliably effective on many SSDs, SMR drives, or devices using a flash translation layer (FTL)/TRIM.
 
 ---
 
