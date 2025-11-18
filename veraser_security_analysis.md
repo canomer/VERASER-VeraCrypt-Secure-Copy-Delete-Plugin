@@ -1,7 +1,7 @@
 #### Security Analysis
 
 **Known Attacks on AES**:
-- No practical attacks on AES-256 (2^256 brute force infeasible)
+- No practical attacks on AES-256
 - Related-key attacks not applicable (single-use keys)
 - Timing attacks mitigated by CNG implementation
 - Side-channel attacks mitigated by hardware AES-NI
