@@ -14,7 +14,7 @@
 - **CPU**: AMD Ryzen 9 9900X (12 cores, 24 threads)
 - **RAM**: 64 GB DDR5-4800
 - **Storage**: 
-  - NVMe SSD: Samsung 980 EVO 1TB (System drive)
+  - NVMe SSD: Samsung 980 EVO 500GB (System drive)
   - SATA HDD: WD BLACK 4TB 5400
 - **OS**: Windows 10 Pro 22H2
 
@@ -52,21 +52,19 @@
 - Hex analysis of original location: No recognizable data patterns
 - Success message displayed
 
-**Duration**: 1.2 seconds
-
 ---
 
 #### Test Case 3.1.2: Secure Copy with All Algorithms
 
-| Algorithm | File Size | Expected | Result | Duration |
-|-----------|-----------|----------|--------|----------|
-| Zero | 50 MB | Copy + Delete | PASS | 0.4s |
-| Random | 50 MB | Copy + Delete | PASS | 0.5s |
-| DoD 3-pass | 50 MB | Copy + Delete | PASS | 1.8s |
-| DoD 7-pass | 50 MB | Copy + Delete | PASS | 4.2s |
-| NIST | 50 MB | Copy + Delete | PASS | 0.6s |
-| Gutmann | 50 MB | Copy + Delete | PASS | 18.7s |
-| SSD | 50 MB | Copy + Delete | PASS | 0.3s |
+| Algorithm | File Size | Expected | Result |
+|-----------|-----------|----------|--------|
+| Zero | 50 MB | Copy + Delete | PASS |
+| Random | 50 MB | Copy + Delete | PASS |
+| DoD 3-pass | 50 MB | Copy + Delete | PASS |
+| DoD 7-pass | 50 MB | Copy + Delete | PASS |
+| NIST | 50 MB | Copy + Delete | PASS |
+| Gutmann | 50 MB | Copy + Delete | PASS |
+| SSD | 50 MB | Copy + Delete | PASS |
 
 **Notes**:
 - All algorithms successfully copied and deleted files
@@ -87,11 +85,8 @@
 
 **Actual Result**: PASS
 - Copy completed successfully
-- Peak memory usage: 15 MB (8 MB buffer + overhead)
 - No performance degradation
 - No system freeze
-
-**Duration**: 48 seconds (copy) + 4 seconds (delete)
 
 ---
 
@@ -131,21 +126,19 @@
 - Hex scan shows no recoverable data
 - Success message displayed
 
-**Duration**: 2.1 seconds
-
 ---
 
 #### Test Case 3.2.2: Secure Delete with All Algorithms
 
-| Algorithm | File Size | Expected | Result | Recovery Attempt | Duration |
-|-----------|-----------|----------|--------|------------------|----------|
-| Zero | 100 MB | Deleted | PASS | Failed | 0.8s |
-| Random | 100 MB | Deleted | PASS | Failed | 1.0s |
-| DoD 3-pass | 100 MB | Deleted | PASS | Failed | 3.5s |
-| DoD 7-pass | 100 MB | Deleted | PASS | Failed | 8.1s |
-| NIST | 100 MB | Deleted | PASS | Failed | 1.1s |
-| Gutmann | 100 MB | Deleted | PASS | Failed | 37.4s |
-| SSD | 100 MB | Deleted | PASS | Failed | 0.6s |
+| Algorithm | File Size | Expected | Result | Recovery Attempt |
+|-----------|-----------|----------|--------|------------------|
+| Zero | 100 MB | Deleted | PASS | Failed |
+| Random | 100 MB | Deleted | PASS | Failed |
+| DoD 3-pass | 100 MB | Deleted | PASS | Failed |
+| DoD 7-pass | 100 MB | Deleted | PASS | Failed |
+| NIST | 100 MB | Deleted | PASS | Failed |
+| Gutmann | 100 MB | Deleted | PASS | Failed |
+| SSD | 100 MB | Deleted | PASS | Failed |
 
 **Recovery Testing**:
 - Ran Recuva immediately after deletion
@@ -158,8 +151,8 @@
 
 | File Type | Size | Algorithm | Result | Notes |
 |-----------|------|-----------|--------|-------|
-| .txt | 1 MB | NIST | PASS | Text document |
-| .jpg | 5 MB | SSD | PASS | Image file |
+| .txt | <1 MB | NIST | PASS | Text document |
+| .jpg | <5 MB | SSD | PASS | Image file |
 | .pdf | 10 MB | DoD3 | PASS | PDF document |
 | .exe | 50 MB | Random | PASS | Executable |
 | .zip | 100 MB | SSD | PASS | Compressed archive |
