@@ -316,13 +316,8 @@ ioctl(fd, FITRIM, &range);  // Fails silently if insufficient privileges
 #### Resource Exhaustion
 
 **Memory Consumption**:
-- Fixed 8 MiB buffer per operation
 - No unbounded allocations
 - Linear scaling with file size
-
-**Test Results**: 10 GB file uses only 15 MB RAM
-
-**Protected against memory exhaustion**
 
 **Disk Space**:
 - Secure Copy requires destination space
