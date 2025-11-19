@@ -17,6 +17,8 @@ https://github.com/veracrypt/VeraCrypt/pull/1627
 
 # VERASER - Secure File Transfer/Erasure Plugin for VeraCrypt 1.25.9
 
+**Warning:** 1.26.27 version is here https://github.com/veracrypt/VeraCrypt/pull/1627
+
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0-green.svg)](CHANGELOG.md)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](docs/COMPATIBILITY.md)
