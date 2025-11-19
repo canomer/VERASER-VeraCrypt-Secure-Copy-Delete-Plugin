@@ -10,6 +10,9 @@ Project Date : Oct 2025 / Independent plugin: stream files into mounted VeraCryp
 
 **Hardware note:** This workflow is most effective on conventional (CMR) HDDs. Overwrite-based secure deletion is *not* reliably effective on many SSDs, SMR drives, or devices using a flash translation layer (FTL)/TRIM.
 
+**Note:** Code Base Moved on Latest Version of VeraCrypt (v1.26.27)
+https://github.com/veracrypt/VeraCrypt/pull/1627
+
 ---
 
 # VERASER - Secure File Transfer/Erasure Plugin for VeraCrypt 1.25.9
